@@ -1,63 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
     <title>Document</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <!--  -->
-    <div class="first_page hidden" > 
-        <h1 class="game_name">Rock ,Paper ,scissors</h1>
-        <h1>
-        You  VS  computer
-        </h1>
-        <button id="newgame" class="newgame">
-            New game
-        </button>
+    <div class="first_page">
+      <h1 class="game_name">Rock ,Paper ,scissors</h1>
+      <h1>You VS computer</h1>
+      <button id="newgame" class="newgame">New game</button>
     </div>
     <!--  -->
-    <div class="second_page">
-        <div class="again_part">
-        <button id="again" class="again">
-                 Again!
+    <div class="second_page hidden">
+      <h1 class="game_name">Rock, Paper, scissors</h1>
+      <div class="game_section">
+        <div class="computer_play">
+          <h1>computer <span id="computerscore">0</span></h1>
+          <div id="show_computer_move" class="show_move"></div>
+          <span id="computer_move" class="text_move"></span>
+        </div>
+        <div class="vs">
+          <h1>VS</h1>
+        </div>
+        <div class="my_play">
+          <h1>You <span id="myscore">0</span></h1>
+          <div id="show_my_move" class="show_move"></div>
+          <span id="my_move" class="text_move"></span>
+        </div>
+      </div>
+      <div>
+        <button>
+          <img src="./images/hand-paper.png" id="hand" alt="Paper" />
         </button>
-        </div>
-             <h1 class="game_name">Rock, Paper, scissors</h1>
-        <div class="game_section">
-            <div class="computer_player">
-                <h1>computer</h1>
-                <div id="show_computer_move" class="show_move"></div>
-                <span id="computer_move" class="text_move"></span>
-            </div>
-            <div class="vs">
-                <h1 >
-                    VS
-                </h1>
-            </div>
-            <div class="you_player">
-                <h1>You</h1>
-                <div id="show_i_move"  class="show_move"></div>
-                <span id="i_move" class="text_move"></span>
-            </div>
-        </div>
-        <div>
-            <span id="result" class="result"></span>
-        </div>
-        <div>
+        <button>
+          <img src="./images/rock.png" id="rock" alt="rock" />
+        </button>
+        <button>
+          <img src="./images/scissors.png" id="scissors" alt="scissors" />
+        </button>
+      </div>
 
-            <button>
-                <img src="./images/hand-paper.png" id="hand" alt="Paper">
-            </button>
-            <button>
-                <img src="./images/rock.png" id="rock" alt="rock">
-            </button>
-            <button>
-                <img src="./images/scissors.png" id="scissors" alt="scissors">
-            </button>
-        </div>
+      <!--  -->
+      <div class="resultpage hidden"></div>
+      <span id="winresult" class="resultt hidden">you win !!.</span>
+      <span id="loseresult" class="resultt hidden">you lose !!.</span>
+        <button id="again" class="again hidden">Try Again!</button>
     </div>
-</body>
+    <script src="./index.js"></script>
+  </body>
 </html>
