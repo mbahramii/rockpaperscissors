@@ -1,6 +1,5 @@
 "use strict";
 
-
 const firstPage = document.querySelector(".first_page");
 const secondPage = document.querySelector(".second_page");
 const newGameBtn = document.getElementById("newgame");
@@ -55,6 +54,7 @@ const computermove = () => {
 
 let mynumber = 0;
 
+// rock move
 rock.addEventListener("click", function () {
    let numbercomputer=computermove();
    showMyMove.innerHTML = `<img src=${"./images/rock.png"} alt=${"rock"}/>`;
@@ -63,6 +63,7 @@ rock.addEventListener("click", function () {
    resultt(mynumber,numbercomputer);
 });
 
+// rock scissors
 scissors.addEventListener("click", function () {
   let numbercomputer=computermove();
   showMyMove.innerHTML = `<img src=${"./images/scissors.png"} alt=${"scissors"}/>`;
@@ -71,6 +72,7 @@ scissors.addEventListener("click", function () {
   resultt(mynumber,numbercomputer);
 });
 
+// hand move
 hand.addEventListener("click", function () {
 let numbercomputer=computermove();
   showMyMove.innerHTML = `<img src=${"./images/hand-paper.png"} alt=${"hand-paper"}/>`;
@@ -79,6 +81,8 @@ let numbercomputer=computermove();
   resultt(mynumber,numbercomputer);
 });
 
+
+// result section 
 const resultt = (mynumber, numbercomputer) => {
   if (mynumber == 2 && numbercomputer == 3) {
     myscorepoint++
@@ -104,14 +108,18 @@ const resultt = (mynumber, numbercomputer) => {
     loseresult.classList.remove("hidden") 
     resultpage.classList.remove("hidden") 
     againBtn.classList.remove("hidden") 
+    loseresult.style.color="#750d0dff"
+    resultpage.style.backgroundColor="#fa3939ff"
   }else if(myscorepoint==3){
     winresult.classList.remove("hidden") 
     resultpage.classList.remove("hidden") 
     againBtn.classList.remove("hidden") 
+    winresult.style.color= "#186013"
+    resultpage.style.backgroundColor="#79e824ff"
   }
 };
 
-
+// try again button 
 againBtn.addEventListener("click",function(){
 myscorepoint=0
 computerscorepoint=0
